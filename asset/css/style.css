@@ -85,7 +85,6 @@
 
 .sosmed{
     display: flex;
-    flex-direction: column;
     position: relative;
     left: -326px;
 }
@@ -147,7 +146,8 @@
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
     width: 30%;
     /* height: 260px; */
-    height: 300px;
+    /* height: 300px; */
+    height: auto;
     cursor: pointer;
     overflow: hidden;
     border-radius: 8px 8px 0px 0px;
@@ -163,10 +163,7 @@
 
 .cards .cardd .cardd-title{
     height: 68px;
-}
-
-.cards .cardd .cardd-title h4{
-    font-size: 18px;
+    margin-top: 12px;
     height: 68px;
     display: flex;
     justify-content: center;
@@ -175,11 +172,110 @@
     transition: all 1s;
 }
 
+.cards .cardd .cardd-title h4{
+    font-size: 18px;
+    width: 80%;
+    margin: 0;
+}
+
 .cards .cardd:hover{
     transform: scale(1.1);
 }
 
-.cards .cardd:hover h4{
+.cards .cardd:hover .cardd-title{
     background-color: #3813C2;
     color: white;
+}
+
+@media (max-width: 992px){
+    .sosmed{
+        left: 0px;
+        margin: 20px auto;
+        gap: 12px;
+        justify-content: center;
+    }
+    
+    .sosmed a span{
+        display: none;
+    }
+
+    .sosmed a{
+        justify-content: center;
+        align-items: center;
+        width: 72px;
+        height: 72px;
+        margin: 0 ;
+        padding: 0 ;
+        text-align: center;
+    }
+
+    .sosmed .icon-sosmed{
+        margin: 0 auto;
+        font-size: 1.5em;
+    }
+
+    
+    .sosmed a:hover{
+        transform: translatex(0);
+        background-color: #000;
+        color: #ED80FD;
+    }
+
+    .sosmed a:hover > .icon-sosmed{
+        color: #ED80FD;
+    }
+
+    .cards .cardd .cardd-title h4{
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 576px){
+
+    .sosmed a{
+        width: 64px;
+        height: 64px;
+    }
+
+    .sosmed .icon-sosmed{
+        font-size: 1.2em;
+    }
+
+    .cards{
+        flex-direction: column;
+        align-items: center;
+        /* height: 104px; */
+    }
+
+    .cards .cardd{
+        width: 100%;
+        height: 104px;
+    }
+    .cards .cardd .card-img img{
+        width: auto;
+        height: 80%;
+        margin: 10px;
+    }
+
+    .cards .cardd .cardd-title{
+        width: 100%;
+        height: 100%;
+        background-color: #3813C2;
+        border-radius: 100px 0px 0px 0px;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        display: flex;
+    }
+
+    .cards .cardd .cardd-title h4{
+        width: 80%;
+        color: white;
+        margin-bottom: -20px;
+        margin-right: -10px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
 }
