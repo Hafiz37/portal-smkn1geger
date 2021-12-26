@@ -1,3 +1,4 @@
+<!-- hero 1 -->
 <div class="hero d-flex flex-column flex-lg-row gap-lg-0 gap-5 justify-content-center">
     <div class="logo d-flex align-items-center justify-content-center" >
         <img src="./asset/images/logoSmkn1geger.png" alt="" class="">
@@ -91,3 +92,243 @@
     }
 }
 
+<!-- selesai hero 1 -->
+
+
+
+
+
+
+
+
+<!-- card &sosmed 1 -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-1 col-12" >
+            <div class="sosmed flex-lg-column">
+                <a target='_blank' href=""><span>Instagram</span><i class="icon-sosmed bi bi-instagram"></i></a>
+                <a target='_blank' href=""><span>Facebook</span><i class="icon-sosmed bi bi-facebook"></i></a>
+                <a target='_blank' href=""><span>WhatsAap</span><i class="icon-sosmed bi bi-whatsapp"></i></a>
+                <a target='_blank' href=""><span>Email</span><i class="icon-sosmed bi bi-envelope-fill"></i></a>
+                <a target='_blank' href=""><span>Map</span><i class="icon-sosmed bi bi-geo-alt"></i></a>
+            </div><!--sosmed-->
+        </div><!--col-->
+        <div class="col-lg-11">
+            <div class="cards gap-4">
+
+                <a href="http://elearning.smkn1geger.sch.id/" class="item cardd  d-flex flex-sm-column justify-content-between" target="_blank">
+                    <div class="card-img d-flex justify-content-sm-center align-items-center ">
+                        <img src="./asset/images/listPortal/e-learning.png" class="mt-sm-3" alt="">
+                    </div><!--card img-->
+                    <div class="cardd-title">
+                        <h4 class="text-center">E-Learning SMKN 1 Geger</h4>
+                    </div><!--card title-->
+                </a><!--cardd-->
+                
+            </div><!--cards-->
+        </div><!--col-->
+    </div><!--row-->
+</div><!--container-fluid-->
+
+
+
+/* sosmed */
+
+.sosmed{
+    display: flex;
+    position: relative;
+    left: -326px;
+}
+
+.sosmed a{
+    font-size: 20px;
+    color: #ED80FD;
+    background-color: #000;
+    width: 400px;
+    margin: 12px;
+    padding: 12px 25px;
+    text-align: right;
+    font-weight: bold;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    transition: 1s all;
+    text-decoration: none;
+}
+
+.sosmed i{
+    font-size: 2em;
+    margin-left: 24px;
+    margin-right: 12px;
+    color: #ED80FD;
+    transition: 1s all;
+}
+
+.sosmed a:hover{
+    transform: translatex(200px);
+    background-color: #ED80FD;
+    color: white;
+}
+
+.sosmed a:hover > .icon-sosmed{
+    color: white;
+}
+
+
+
+/* card */
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-evenly;
+    width: 85%;
+    margin: 0 auto;
+}
+
+ a.item{
+    color: #000;
+    text-decoration: none;
+}
+
+.cards .cardd{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+    width: 30%;
+    /* height: 260px; */
+    /* height: 300px; */
+    height: auto;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px 8px 0px 0px;
+    transition: all 1s;
+}
+
+.cards .cardd .card-img img{
+    border: 0.1px solid rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.25);
+    width: 90%;
+}
+
+.cards .cardd .cardd-title{
+    height: 68px;
+    margin-top: 12px;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px 0px 0px 0px;
+    transition: all 1s;
+}
+
+.cards .cardd .cardd-title h4{
+    font-size: 18px;
+    width: 80%;
+    margin: 0;
+}
+
+.cards .cardd:hover{
+    transform: scale(1.1);
+}
+
+.cards .cardd:hover .cardd-title{
+    background-color: #3813C2;
+    color: white;
+}
+
+@media (max-width: 992px){
+    .sosmed{
+        left: 0px;
+        margin: 20px auto;
+        gap: 12px;
+        justify-content: center;
+    }
+    
+    .sosmed a span{
+        display: none;
+    }
+
+    .sosmed a{
+        justify-content: center;
+        align-items: center;
+        width: 72px;
+        height: 72px;
+        margin: 0 ;
+        padding: 0 ;
+        text-align: center;
+    }
+
+    .sosmed .icon-sosmed{
+        margin: 0 auto;
+        font-size: 1.5em;
+    }
+
+    
+    .sosmed a:hover{
+        transform: translatex(0);
+        background-color: #000;
+        color: #ED80FD;
+    }
+
+    .sosmed a:hover > .icon-sosmed{
+        color: #ED80FD;
+    }
+
+    .cards .cardd .cardd-title h4{
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 576px){
+
+    .sosmed a{
+        width: 64px;
+        height: 64px;
+    }
+
+    .sosmed .icon-sosmed{
+        font-size: 1.2em;
+    }
+
+    .cards{
+        flex-direction: column;
+        align-items: center;
+        /* height: 104px; */
+    }
+
+    .cards .cardd{
+        width: 100%;
+        height: 104px;
+    }
+    .cards .cardd .card-img img{
+        width: auto;
+        height: 80%;
+        margin: 10px;
+    }
+
+    .cards .cardd .cardd-title{
+        width: 100%;
+        height: 100%;
+        background-color: #3813C2;
+        border-radius: 100px 0px 0px 0px;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        display: flex;
+    }
+
+    .cards .cardd .cardd-title h4{
+        width: 80%;
+        color: white;
+        margin-bottom: -20px;
+        margin-right: -10px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+}
+
+<!-- selesai sosmed &per card 1 -->
